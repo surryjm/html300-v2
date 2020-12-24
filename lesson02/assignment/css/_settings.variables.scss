@@ -1,5 +1,4 @@
 // Colors
-$gray: #f6f5f6;
 $white: #ffffff;
 $black: #000000;
 $green: #7acb00;
@@ -10,3 +9,15 @@ $yellow: #ffb617;
 $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
+
+// Font
+$fontfam: arial, helvetica, sans-serif;
+
+// Border - base color
+$base-color: #d3d3d3;
+
+// Name/text
+$darken-color: darken($base-color, 40%);
+
+// Field/values background
+$lighten-color: lighten($base-color, 14%);
