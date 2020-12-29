@@ -37,11 +37,14 @@
 // Add breakpoints
 $breakpoints: (
     "xl"            "screen and (min-width: 1300px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "lg"            "screen and (min-width: 920px)",
+    "desk"          "screen and (min-width: 1200px)",
+    "sm-desk"       "screen and (max-width: 1199px)",
+    "lg"            "screen and (min-width: 922px)",
+    "lg-tab"        "screen and (max-width: 991px)",
     "tab"           "screen and (min-width: 768px)",
     "mobile"        "screen and (max-width: 767px)",
-    "infograph"     "screen and (min-width: 540px)",
+    "infograph"     "screen and (min-width: 576px)",
+    "x-small"       "screen and (max-width: 575px)",
     "med"           "screen and (min-width: 40em)",
     "sm"            "screen and (min-width: 30em)",
     "small"         "screen and (min-width: 20em)",
