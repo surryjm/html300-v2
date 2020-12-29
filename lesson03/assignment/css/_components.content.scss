@@ -1,17 +1,164 @@
 html {
     box-sizing: border-box;
-}
-
-*,
-*:after,
-*:before {
+  }
+  
+  *,
+  *:after,
+  *:before {
     box-sizing: inherit;
-}
-
-.main {
+  }
+  
+  body {
+    color: $darken-color;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 3rem solid $base-color;
+    padding: 2.5rem;
+    width: 70%;
+    margin-bottom: 4rem;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  /****** Left column classes - headshot, name, title ******/
+  
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 37%;
+    &_headshot {
+      border-radius: 50%;
+      width: 90%;
+      height: auto;
+      margin-bottom: 1rem;  
+    }
+    &_name-title {
+      text-align: center;
+    }
+    &_title {
+      font-style: italic;
+      font-size: 1.2em;
+      margin-top: .5rem;
+    }
+    &_name {
+      color: $darken-color; 
+      letter-spacing: -.5px;
+      margin-bottom: 0;
+      font-size: 1.7rem;
+    }
+  }
+  
+  /****** Right column classes - fields/values ******/
+  
+  .right-column {
+    background-color: $lighten-color;
     padding: 2rem;
-}
+    width: 80%;
+    margin-left: 2.5rem;
+    &_field-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 .5rem 0 0;
+    }
+    &_fields {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      margin: 0 0 1.5rem 0;
+    }
+    &_field-value {
+      margin-top: 0;
+      margin-bottom: 0;  
+    }
+    &_linkedin-img-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 1.5rem;
+      & img {
+        margin: 0 .5rem 0 0;
+      }
+    }
+  }
+  
+  /****** Extra-small devices ******/
 
-h1 {
-    color: $red;  
-}
+  @media screen and (max-width: 575px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      padding: .25rem;
+      width: 100%;
+    }
+    .right-column {
+      padding: 2rem;
+      width: 100%;
+      margin: 2rem 2.5rem 0 2.5rem;
+    }
+    .left-column {
+      margin-top: 2rem;
+      width: 55%;
+    }
+  }
+
+  /****** Small devices ******/
+  
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+      padding: .25rem;
+      width: 100%;
+    }
+    .right-column {
+      padding: 2rem;
+      width: 100%;
+      margin: 2rem 2.5rem 0 2.5rem;
+    }
+    .left-column {
+      margin-top: 2rem;
+      width: 44%;
+      &_headshot {
+        width: 90%;  
+      }
+    }
+  }
+  
+  /****** Medium devices ******/
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .left-column {
+      &_headshot {
+        width: 80%;  
+      }
+    }
+    .container {
+      border: 2rem solid $base-color;
+      padding: 2rem;
+      width: 100%;
+    }
+  }
+  
+  /****** Large devices ******/
+  
+  @media screen and (min-width: 922px) and (max-width: 1199px) {
+    .container {
+      width: 90%;
+    }
+    .left-column {
+      &_headshot {
+        width: 80%;  
+      }
+    }
+  }
