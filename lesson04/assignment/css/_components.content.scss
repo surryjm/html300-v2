@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-fam;
+  color: $black;
+  padding: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 1rem 0 3rem 0;
+  text-transform: uppercase;
+}
+
+// Nav item underline animation:
+// https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+
+// Inspired by:
+// https://biowillysbeans.com/
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  @include flex-row;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 4rem;
+  & li {
+    list-style-type: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    & a {
+      text-decoration: none;
+      color: $black;
+      position: relative;
+      &:hover {
+        color: $black;
+      } // Add a border and hide through transformation
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px; // Thick underline
+        bottom: 0;
+        left: 0;
+        background-color: $tentonblue; // Blue underline with black text
+        visibility: hidden;
+        transform: scaleX(0); // Underline not shown
+        transition: all 0.3s ease-in-out 0s; // Slow transition with no delay
+      } // Animate on hover
+      &:hover::before {
+        visibility: visible;
+        transform: scaleX(1.1); // Underline now displays and extends
+        // a little beyond the edge of the element
+      }
+    }
+  }
+}
+
+// Image zoom on hover:
+// https://w3bits.com/css-image-hover-zoom/
+
+// Inspired by:
+// https://bluestarcoffeeroasters.com/
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+.img-hover-zoom { // Container element that will be hovered
+  @include box(500px);
+  overflow: hidden; // Image will not show beyond the height/width above
+  & img {
+    transition: transform 2s ease-in-out .15s; // Slow transition with slight delay
+  }
+  &:hover img {
+    transform: scale(1.5); // Image now zooms in to 1.5 times the image size
+  }
+}
