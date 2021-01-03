@@ -1,15 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
-    </head>
-    <body>
-        <main class="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/13eb2ac932.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <title>Assignment 05 - CSS Grid</title>
+  </head>
+
+  <body>
+    <a href="#main-content" class="hidden">Skip to main content</a>
+    <div class="container">
+      <header class="header">
+        <div class="header_name-logo">
+          <p>Ten Ton</p>
+          <p>Coffee</p>
+        </div>
+        <nav class="header_nav">
+          <ul class="header_nav_items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Merch</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <div class="main-container">
+          <p class="main-container_intro">Ten Ton Coffee offers locally roasted coffee and house-made baked goods, located on Main Street in the historic city of Waitsburg, Washington.</p>
+          <div class="main-container_articles">
+            <article>
+              <div class="main-container_articles_wrapper">
+                <img src="img/ten-ton-owners.jpeg" width="500" height="500">
+              </div>
+              <div class="main-container_articles_text">
+                <h4>Grab a warm drink and a tasty treat</h4>
+                <p>With exceptional espresso, pastries baked from scratch, gluten-free options, house-made granola, and delicious panini, Ten Ton Coffee has what you crave</p>
+              </div>
+            </article>
+            <article>
+              <div class="main-container_articles_wrapper">
+                <img src="img/ten-ton-mask.jpg" width="500" height="500">
+              </div>
+              <div class="main-container_articles_text">
+                <h4>We're open!</h4>
+                <p>Our fabulous take-out window is open daily, 7:30am - 2pm. Come grab a coffee and say hello!</p>
+              </div>
+            </article>
+          </div>
           
-        </main>
-    </body>
+          <section>
+            <h2>Instagram</h2> <!-- To be API feed -->
+            <div class="main-container_instagram">
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-1.jpg" alt="Instagram image 1" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-2.jpg" alt="Instagram image 2" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-3.jpg" alt="Instagram image 3" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-4.jpg" alt="Instagram image 4" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-5.jpg" alt="Instagram image 5" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-1.jpg" alt="Instagram image 1" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-2.jpg" alt="Instagram image 2" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-3.jpg" alt="Instagram image 3" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-4.jpg" alt="Instagram image 4" width="250" height="250">
+              </div>
+              <div class="main-container_instagram_wrapper">
+                <img src="img/ten-ton-insta-5.jpg" alt="Instagram image 5" width="250" height="250">
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer_form-address-container">
+          <form id="mailing-list-form">
+            <legend>
+              <h4>Find out what's brewing at Ten Ton Coffee</h4>
+              <p>Sign up for our mailing list and receive 15% off your next order</p>
+            </legend>
+            <input class="footer_form-address-container_input" id="input-email" type="email" name="email" placeholder="Enter your email" aria-label="Email">
+            <button class="footer_form-address-container_submit" type="submit">Subscribe</button>
+          </form>
+          <address class="footer_form-address-container_address">
+            <h4>Location and Hours</h4>
+            <p>Open daily, 7:30am - 2pm</p>
+            <p>216 Main St, Waitsburg, WA 99361</p>
+            <p><a class="footer_form-address-container_address_underline-transition" href="mailto:tentoncoffeebar@gmail.com">tentoncoffeebar@gmail.com</a></p>
+            <p><a class="footer_form-address-container_address_phone" href="tel:555-555-5555">555-555-5555</a></p>
+          </address>
+        </div>
+        <div class="footer_social-icons">
+          <a class="footer_social-icons_icon footer_social-icons_icon_facebook" href="https://www.facebook.com/tentoncoffee" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a class="footer_social-icons_icon footer_social-icons_icon_instagram" href="https://www.instagram.com/tentoncoffee/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <p class="footer_copyright">&copy;2021 Ten Ton Coffee</p>
+      </footer>
+    </div>
+
+  </body>
+
 </html>
