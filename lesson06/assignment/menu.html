@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/13eb2ac932.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <title>Menu</title>
+  </head>
+
+  <body>
+    <a href="#main-content" class="hidden">Skip to main content</a>
+    <div class="container-fluid">
+      <div class="row">
+        <header class="col-sm-12 col-12 jumbotron jumbotron-fluid background-image">
+          <nav class="navbar navbar-expand-lg d-flex flex-row justify-content-between align-items-start">
+            <div class="navbar-brand text-white text-uppercase d-flex flex-column align-items-center">
+              <h1 class="display-1">Ten Ton</h1>
+              <h1 class="display-3">Coffee</h1>
+            </div>
+            <ul class="navbar-nav text-uppercase">
+              <li class="nav-item"><a class="text-white nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="text-white nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="text-white nav-link" href="menu.html">Menu</a></li>
+              <li class="nav-item"><a class="text-white nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <main id="main-content" class="row justify-content-center mb-5">
+        <div class="accordion col-12 col-xl-10 mb-5" id="menuAccordion">
+          <h2 class="text-uppercase text-center mb-5 mt-4">Menu</h2>
+          <section class="card">
+            <div class="card-header" id="headingOne">
+              <h3 class="text-center mb-0">
+                <button class="btn btn-link" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Coffee
+                </button>
+              </h3>
+            </div>
+            <div id="collapseOne" class="collapse show container" aria-labelledby="headingOne" data-parent="#menuAccordion">
+              <div class="card-body row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Drip Coffee</h5>
+                  <ul class="list-inline d-flex flex-column">
+                  <li class="list-inline-item">Small 2.50</li>
+                  <li class="list-inline-item">Large 2.90</li>
+                </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Americano</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">Small 2.50</li>
+                    <li class="list-inline-item">Large 2.90</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Latte</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">Small 2.50</li>
+                    <li class="list-inline-item">Large 2.90</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Iced Latte</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">Small 4.75</li>
+                    <li class="list-inline-item">Large 5.25</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Caramel Macchiato</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">Small 4.25</li>
+                    <li class="list-inline-item">Large 4.75</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Mocha</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">Small 4.50</li>
+                    <li class="list-inline-item">Large 5.00</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-header" id="headingTwo">
+              <h3 class="text-center mb-0">
+                <button class="btn btn-link" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Food
+                </button>
+              </h3>
+            </div>
+            <div id="collapseTwo" class="collapse container" aria-labelledby="headingTwo" data-parent="#menuAccordion">
+              <div class="card-body row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Croissant</h5>
+                  <ul class="list-inline d-flex flex-column">
+                  <li class="list-inline-item">3.35</li>
+                </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Pain Au Chocolat</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">3.85</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Apple Turnover</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">4.35</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Raspberry Donut</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">3.40</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Chocolate Chip Cookie</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">2.75</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Ginger Chew Cookie</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">3.65</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-header" id="headingThree">
+              <h3 class="text-center mb-0">
+                <button class="btn btn-link" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Other
+                </button>
+              </h3>
+            </div>
+            <div id="collapseThree" class="collapse container" aria-labelledby="headingThree" data-parent="#menuAccordion">
+              <div class="card-body row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Chai Tea Latte</h5>
+                  <ul class="list-inline d-flex flex-column">
+                  <li class="list-inline-item">Small 4.40</li>
+                  <li class="list-inline-item">Large 4.70</li>
+                </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>London Fog</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">Small 3.25</li>
+                    <li class="list-inline-item">Large 3.75</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Green Tea Matcha Latte</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">Small 4.40</li>
+                    <li class="list-inline-item">Large 4.95</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Soft Drinks</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">2.75</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Perrier</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">3.10</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-4">
+                  <h5>Orangina</h5>
+                  <ul class="list-inline d-flex flex-column">
+                    <li class="list-inline-item">3.50</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <footer class="text-white pt-4 px-4">
+          <div class="row">
+            <form class="form-col col-md-7 col-lg-6">
+              <legend>
+                <h4>Find out what's brewing at Ten Ton Coffee</h4>
+                <p>Sign up for our mailing list and receive 15% off your next order</p>
+              </legend>
+              <div class="form-inline">
+                <input class="w-75 form-control form-control-lg rounded-sm border border-0" type="email" name="email" placeholder="Enter your email" aria-label="Email">
+                <button class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit" data-toggle="tooltip" data-placement="top" title="Subscribe here!">Subscribe</button>
+              </div>
+            </form>
+            <address class="col-md-5 col-lg-6">
+              <h4>Location and Hours</h4>
+              <p>Open daily, 7:30am - 2pm</p>
+              <p>216 Main St, Waitsburg, WA 99361</p>
+              <p><a class="contact-email" href="mailto:tentoncoffeebar@gmail.com">tentoncoffeebar@gmail.com</a></p>
+              <p><a href="tel:555-555-5555">555-555-5555</a></p>
+            </address>
+          </div>
+          <div class="col-12 text-center display-4">
+            <a class="mr-3" href="https://www.facebook.com/tentoncoffee" target="_blank"><i class="fab fa-facebook-square social"></i></a>
+            <a href="https://www.instagram.com/tentoncoffee/" target="_blank"><i class="fab fa-instagram-square social"></i></a>
+          </div>
+        <p class="text-center mt-3">&copy;2021 Ten Ton Coffee</p>
+      </footer>
+    </div>
+
+  </body>
+
+</html>

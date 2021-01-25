@@ -1,15 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/13eb2ac932.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <title>Assignment 06 - Bootstrap</title>
+  </head>
+
+  <body>
+    <a href="#main-content" class="hidden">Skip to main content</a>
+    <div class="container-fluid">
+      <div class="row">
+        <header class="col-sm-12 col-12 jumbotron jumbotron-fluid background-image">
+          <nav class="navbar navbar-expand-lg d-flex flex-row justify-content-between align-items-start">
+            <div class="navbar-brand text-white text-uppercase d-flex flex-column align-items-center">
+              <h1 class="display-1">Ten Ton</h1>
+              <h1 class="display-3">Coffee</h1>
+            </div>
+            <ul class="navbar-nav text-uppercase">
+              <li class="nav-item"><a class="text-white nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="text-white nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="text-white nav-link" href="menu.html">Menu</a></li>
+              <li class="nav-item"><a class="text-white nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+        <main id="main-content">
+          <p class="text-center intro">Ten Ton Coffee offers locally roasted coffee and house-made baked goods, located on Main Street in the historic city of Waitsburg, Washington.</p>
+            <div class="row">
+              <article class="col-md-6 col-lg-6 mb-5">
+                <div class="image-wrapper img-fluid">
+                  <img class="img-fluid w-100" src="img/ten-ton-owners.jpeg" width="500" height="500">
+                </div>
+                <div class="text-center bg-white p-4">
+                  <h4>Grab a warm drink and a tasty treat</h4>
+                  <p>With exceptional espresso, pastries baked from scratch, gluten-free options, house-made granola, and delicious panini, Ten Ton Coffee has what you crave</p>
+                </div>
+              </article>
+              <article class="col-md-6 col-lg-6 mb-5">
+                <div class="image-wrapper">
+                  <img class="img-fluid w-100" src="img/ten-ton-mask.jpg" width="500" height="500">
+                </div>
+                <div class="text-center bg-white p-4">
+                  <h4>We're open!</h4>
+                  <p>Our fabulous take-out window is open daily, 7:30am - 2pm. Come grab a coffee and say hello!</p>
+                </div>
+              </article>
+            </div>
         </main>
-    </body>
+
+        <footer class="text-white pt-4 px-4">
+            <div class="row">
+              <form class="form-col col-md-7 col-lg-6">
+                <legend>
+                  <h4>Find out what's brewing at Ten Ton Coffee</h4>
+                  <p>Sign up for our mailing list and receive 15% off your next order</p>
+                </legend>
+                <div class="form-inline">
+                  <input class="w-75 form-control form-control-lg rounded-sm border border-0" type="email" name="email" placeholder="Enter your email" aria-label="Email">
+                  <button class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit">Subscribe</button>
+                </div>
+              </form>
+              <address class="col-md-5 col-lg-6">
+                <h4>Location and Hours</h4>
+                <p>Open daily, 7:30am - 2pm</p>
+                <p>216 Main St, Waitsburg, WA 99361</p>
+                <p><a class="contact-email" href="mailto:tentoncoffeebar@gmail.com">tentoncoffeebar@gmail.com</a></p>
+                <p><a href="tel:555-555-5555">555-555-5555</a></p>
+              </address>
+            </div>
+            <div class="col-12 text-center display-4">
+              <a class="mr-3" href="https://www.facebook.com/tentoncoffee" target="_blank"><i class="fab fa-facebook-square social"></i></a>
+              <a href="https://www.instagram.com/tentoncoffee/" target="_blank"><i class="fab fa-instagram-square social"></i></a>
+            </div>
+          <p class="text-center mt-3">&copy;2021 Ten Ton Coffee</p>
+        </footer>
+
+    </div>
+
+  </body>
+
 </html>
