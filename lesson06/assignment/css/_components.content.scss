@@ -1,13 +1,495 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+.hidden {
+  position: relative;
+  left: -10000px;
+  top: auto;
+  color: $tentondarker;
+}
+
+.hidden:focus {
+  left: 0;
+}
+
+// Underline transition
+@mixin underline-transition {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -.25em; // Added extra space between text and underline
+    background-color: $white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.20s ease-in-out 0s;
+  }
+  &:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
+
+body {
+  font-family: $main-font;
+  font-size: 1.25rem;
+  color: $black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: $nav-font;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: $nav-font;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-family: $nav-font;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h5 {
+  font-family: $nav-font;
+  font-size: 1.5rem;
+}
+
+ul {
+  margin: 0;
+}
+
+.background-image {
+  background: 
+    linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+    url('../img/matt-hoffman-ZUUsGnG5zwc-unsplash-height-1000.jpg') no-repeat left fixed;
+  background-color: $tentondarker;
+  height: 80vh;
+}
+
+.jumbotron {
+  padding: 2.5rem 0 3rem 0;
+  & nav, .navbar {
+    font-family: $nav-font;
+    font-size: 2.5rem;
+    padding: 0 5% 0 5%;
+    & li:not(:last-child) {
+      padding-right: 4rem;
+    }
+    & a {
+      @include underline-transition;
+    }
+    & h1:nth-of-type(1) {
+      margin-top: 9rem;
+      font-size: 7rem;
+    }
+    & h1:nth-of-type(2) {
+      margin-top: 0;
+      font-size: 5rem;
+    }
+  }
+}
+
+main {
+  padding: 0 5% 0 5%;
+  & .intro, .about-text {
+    font-size: 1.5rem;
+    padding: 0 20% 0 20%;
+    line-height: 1.8;
+    letter-spacing: .025em;
+    margin: 1.5rem 0 4rem 0;
+  }
+  & .contact-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: .025em;
+    margin: 1.5rem 0 4rem 0;
+  }
+  & article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & article > .image-wrapper {
+    overflow: hidden;
+    background-color: $black;
+    & img {
+      opacity: .7;
+      transition: transform 10s ease-out .15s, opacity .5s ease-out; // Image zoom transition
+    }
+    &:hover img {
+      opacity: 1;  // Image fade in/out transition
+      transform: scale(1.5);
+    }
+  }
+  & article > div:nth-of-type(2) {
+    position: relative;
+    margin-top: -50px;
+    width: 90%;
+  }
+  & .btn-link {
+    color: $black;
+    font-size: 2.5rem;
+    &:hover {
+      color: $black;
+    }
+  }
+  & .contact-page-email-phone {
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+  }
+  & address {
+    padding: 0 5% 0 5%;
+  }
+}
+
+footer {
+  background-color: $black;
+  margin: 0 -3% 0 -3%;
+  & .row {
+    padding: 1% 5% 0 5%;
+  }
+  & .contact-email {
+    @include underline-transition;
+  }
+  & a {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  & legend {
+    font-size: 1.2rem;
+  }
+  & .social {
+    transition: .5s;
+    &:hover {
+      color: $tentonbluegreen;
+    }
+  }
+  & input {
+    margin-right: .25rem;
+  }
+  & .subscribe {
+    font-family: $nav-font;
+    transition: .5s;
+    color: $white;
+    background-color: $black;
+    border: 2px solid $white;
+    &:hover {
+      background-color: $tentonbluegreen;
+      color: $black;
+      border: 2px solid $tentonbluegreen;
+    }
+  }
+  & address {
+    text-align: right;
+  }
+}
+
+
+
+/*************************** MEDIA QUERIES *******************************/
+
+
+/****************** EXTRA SMALL DEVICES ************************/
+
+@media screen and (max-width: 575px) {
+  .jumbotron {
+    padding: 5% 1% 0 1%;
+    & nav, .navbar {
+      font-size: 1rem;
+      & h1:nth-of-type(1) {
+        margin: 2rem 0 .5rem 0;
+        font-size: 3.5rem;
+      }
+      & h1:nth-of-type(2) {
+        margin-top: 0;
+        font-size: 2.5rem;
+      }
+      & div {
+        align-items: center;
+      }
+      & li {
+        font-size: 1.5rem;
+      }
+      & li:not(:last-child) {
+        padding-right: 7%;
+      }
+    }
+  }
+
+  .background-image {
+    background: 
+      linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+      url('../img/matt-hoffman-ZUUsGnG5zwc-unsplash-height-400.jpg') no-repeat center;
+    background-color: $tentondarker;
+    height: 35vh;
+  }
+
+  main {
+    & h2 {
+      font-size: 2.5rem;
+    }
+    & h3 {
+      font-size: 2rem;
+    }
+    & .intro, .about-text {
+      font-size: 1.2rem;
+      padding: 0 7% 0 7%;
+      margin-bottom: 3rem;
+    }
+    & article {
+      margin: 0 5% 0 5%;
+    }
+    & address {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+
+  footer {
+    & .row {
+      padding: 1% 1% 0 1%;
+    }
+    & div > form > legend {
+      text-align: center;
+    }
+    & div > address {
+      text-align: center;
+    }
+    & div > form > div {
+      margin: 2rem -1rem 2rem -1rem;
+    }
+    & .form-inline {
+      justify-content: center;
+    }
+  }
+}
+
+
+/****************** SMALL DEVICES ******************************/
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .jumbotron {
+    padding: 5% 1% 0 1%;
+    & nav, .navbar {
+      font-size: 1rem;
+      & h1:nth-of-type(1) {
+        margin: 2rem 0 .5rem 0;
+        font-size: 3.5rem;
+      }
+      & h1:nth-of-type(2) {
+        margin-top: 0;
+        font-size: 2.5rem;
+      }
+      & div {
+        align-items: center;
+      }
+      & li {
+        font-size: 1.5rem;
+      }
+      & li:not(:last-child) {
+        padding-right: 7%;
+      }
+    }
+  }
+
+  .background-image {
+    background: 
+      linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+      url('../img/matt-hoffman-ZUUsGnG5zwc-unsplash-height-400.jpg') no-repeat center;
+    background-color: $tentondarker;
+    height: 35vh;
+  }
+
+  main {
+    & h2 {
+      font-size: 2.5rem;
+    }
+    & h3 {
+      font-size: 2rem;
+    }
+    & .intro, .about-text {
+      font-size: 1.2rem;
+      padding: 0 7% 0 7%;
+      margin-bottom: 3rem;
+    }
+    & article {
+      margin: 0 5% 0 5%;
+    }
+    & address {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+
+  footer {
+    & div > form > legend {
+      text-align: center;
+    }
+    & div > address {
+      text-align: center;
+    }
+    & div > form > div {
+      margin: 2rem 0 2rem 0;
+    }
+    & .form-inline {
+      justify-content: center;
+    }
+  }
+}
+
+
+/****************** TABLETS ************************************/
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .jumbotron {
+    padding: 3% 1% 0 1%;
+    & nav, .navbar {
+      & h1:nth-of-type(1) {
+        font-size: 4rem;
+        margin: 2rem 0 .5rem 0;
+      }
+      & h1:nth-of-type(2) {
+        font-size: 3rem;
+        margin-top: 0;
+      }
+      & div {
+        align-items: center;
+      }
+      & li {
+        font-size: 1.7rem;
+        line-height: 1.6;
+      }
+      & li:not(:last-child) {
+        padding-right: 7%;
+      }
+    }
+  }
+
+  .background-image {
+    background: 
+      linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+      url('../img/matt-hoffman-ZUUsGnG5zwc-unsplash-height-400.jpg') no-repeat center;
+    background-color: $tentondarker;
+    height: 35vh;
+  }
+
+  main {
+    & .intro, .about-text {
+      font-size: 1.2rem;
+      padding: 0 7% 0 7%;
+    }
+    & address {
+      font-size: 1.2rem;
+    }
+  }
+
+  footer {
+    & .row {
+      padding: 1% 4% 0 4%;
+    }
+    & h4 {
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+    }
+    & p {
+      font-size: 1.1rem;
+    }
+    & div > form > .form-inline {
+      flex-flow: row;
+    }
+    & div > form > div {
+      margin: 2rem 0 2rem 0;
+    }
+    & .form-inline {
+      justify-content: center;
+    }
+  }
+}
+
+
+
+
+/****************** LARGE DEVICES ******************************/
+
+@media screen and (min-width: 992px) and (max-width: 1366px) {
+  .jumbotron {
+    padding: 3% 3% 0 3%;
+    & nav, .navbar {
+      padding: 0;
+      & h1:nth-of-type(1) {
+        font-size: 5rem;
+        margin: 2rem 0 .5rem 0;
+      }
+      & h1:nth-of-type(2) {
+        font-size: 4rem;
+        margin-top: 0;
+      }
+      & div {
+        align-items: center;
+        padding-left: 3%;
+      }
+      & ul {
+        padding-right: 0%;
+      }
+      & li {
+        font-size: 2rem;
+        line-height: 1.6;
+      }
+      & li:not(:last-child) {
+        padding-right: 1.7rem;
+      }
+    }
+  }
+  
+  .background-image {
+    background: 
+      linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+      url('../img/matt-hoffman-ZUUsGnG5zwc-unsplash-height-632.jpg') no-repeat center;
+    background-color: $tentondarker;
+    height: 40vh;
+  }
+
+  main {
+    & .intro, .about-text {
+      padding: 0 15% 0 15%;
+      margin: 1.5rem 0 3rem 0;
+    }
+  }
+
+  footer {
+    & .form-inline {
+      flex-flow: row;
+    }
+  }
+
 }
