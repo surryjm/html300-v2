@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js" charset="utf-8"></script>
     <title>About</title>
   </head>
 
@@ -19,6 +20,7 @@
     <a href="#main-content" class="hidden">Skip to main content</a>
     <div class="container-fluid">
       <div class="row">
+        <!-- JUMBOTRON AND NAV -->
         <header class="col-sm-12 col-12 jumbotron jumbotron-fluid background-image">
           <nav class="navbar navbar-expand-lg d-flex flex-row justify-content-between align-items-start">
             <div class="navbar-brand text-white text-uppercase d-flex flex-column align-items-center">
@@ -41,6 +43,7 @@
           <p class="mb-5">With exceptional espresso, pastries baked from scratch, gluten-free options, house-made granola, and delicious panini, Ten Ton Art & Coffee has what you crave. A perfect choice for breakfast, lunch, or a quick pick-me-up.</p>
           <p>Coffee shops in towns and villages throughout the world always seem to be community gathering places, and Ten Ton is no exception. Join us!</p>
         </section>
+        <!-- IMAGES SECTION -->
         <section class="col-xl-12 col-lg-8 col-md-10 col-sm-12 text-center mb-5">
           <h3 class="text-uppercase">Instagram</h3> <!-- To be API feed -->
           <img class="img-fluid m-2" src="img/ten-ton-insta-1.jpg" alt="Instagram image 1" width="250" height="250">
@@ -61,9 +64,10 @@
                 <h4>Find out what's brewing at Ten Ton Coffee</h4>
                 <p>Sign up for our mailing list and receive 15% off your next order</p>
               </legend>
+              <!-- TOOLTIPS -->
               <div class="form-inline">
-                <input class="w-75 form-control form-control-lg rounded-sm border border-0" type="email" name="email" placeholder="Enter your email" aria-label="Email">
-                <button class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit">Subscribe</button>
+                <input class="w-75 form-control form-control-lg rounded-sm border border-0" type="email" name="email" placeholder="Enter your email" aria-label="Email" data-toggle="tooltip" data-placement="bottom" title="Enter email to subscribe!">
+                <button class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit" data-toggle="tooltip" data-placement="bottom" title="Subscribe here!">Subscribe</button>
               </div>
             </form>
             <address class="col-md-5 col-lg-6">

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <script src="scripts/scripts.js" charset="utf-8"></script>
     <title>Assignment 06 - Bootstrap</title>
   </head>
 
@@ -19,6 +20,7 @@
     <a href="#main-content" class="hidden">Skip to main content</a>
     <div class="container-fluid">
       <div class="row">
+        <!-- JUMBOTRON AND NAV -->
         <header class="col-sm-12 col-12 jumbotron jumbotron-fluid background-image">
           <nav class="navbar navbar-expand-lg d-flex flex-row justify-content-between align-items-start">
             <div class="navbar-brand text-white text-uppercase d-flex flex-column align-items-center">
@@ -38,6 +40,7 @@
         <main id="main-content">
           <p class="text-center intro">Ten Ton Coffee offers locally roasted coffee and house-made baked goods, located on Main Street in the historic city of Waitsburg, Washington.</p>
             <div class="row">
+              <!-- IMAGE ZOOM -->
               <article class="col-md-6 col-lg-6 mb-5">
                 <div class="image-wrapper img-fluid">
                   <img class="img-fluid w-100" src="img/ten-ton-owners.jpeg" width="500" height="500">
@@ -66,9 +69,10 @@
                   <h4>Find out what's brewing at Ten Ton Coffee</h4>
                   <p>Sign up for our mailing list and receive 15% off your next order</p>
                 </legend>
+                <!-- TOOLTIPS -->
                 <div class="form-inline">
-                  <input class="w-75 form-control form-control-lg rounded-sm border border-0" type="email" name="email" placeholder="Enter your email" aria-label="Email">
-                  <button class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit">Subscribe</button>
+                  <input class="w-75 form-control form-control-lg rounded-sm border border-0" type="email" name="email" placeholder="Enter your email" aria-label="Email" data-toggle="tooltip" data-placement="bottom" title="Enter email to subscribe!">
+                  <button class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit" data-toggle="tooltip" data-placement="bottom" title="Subscribe here!">Subscribe</button>
                 </div>
               </form>
               <address class="col-md-5 col-lg-6">

@@ -122,6 +122,12 @@ main {
     letter-spacing: .025em;
     margin: 1.5rem 0 4rem 0;
   }
+  & .contact-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: .025em;
+    margin: 1.5rem 0 4rem 0;
+  }
   & article {
     display: flex;
     flex-direction: column;
@@ -150,6 +156,15 @@ main {
     &:hover {
       color: $black;
     }
+  }
+  & .contact-page-email-phone {
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+  }
+  & address {
+    padding: 0 5% 0 5%;
   }
 }
 
@@ -252,6 +267,11 @@ footer {
     & article {
       margin: 0 5% 0 5%;
     }
+    & address {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
   }
 
   footer {
@@ -324,6 +344,11 @@ footer {
     & article {
       margin: 0 5% 0 5%;
     }
+    & address {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
   }
 
   footer {
@@ -382,6 +407,9 @@ footer {
     & .intro, .about-text {
       font-size: 1.2rem;
       padding: 0 7% 0 7%;
+    }
+    & address {
+      font-size: 1.2rem;
     }
   }
 
