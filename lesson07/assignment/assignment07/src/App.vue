@@ -66,9 +66,10 @@ export default {
       let input = document.getElementById('input');
       let text = input.value;
       let emptyText = document.getElementById('isEmptyText');
-      if (text === "") {
+      const regex = /.+\@.+\..+/; //eslint-disable-line
+
+      if (text === "" || regex.test(text) === false) {
         emptyText.innerText = 'Please enter email above';
-        console.log(emptyText);
       } else {
         emptyText.innerText = "Thanks for joining!";
       }
