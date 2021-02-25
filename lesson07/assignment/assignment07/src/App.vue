@@ -35,7 +35,7 @@
               <div class="form-inline">
                 <input id="input" class="w-75 form-control form-control-lg rounded-sm border border-0" type="email" name="email" placeholder="Enter your email" aria-label="Email" data-toggle="tooltip" data-placement="bottom" title="Enter email to subscribe!">
                 <!-- ONCLICK AND IF/ELSE -->
-                <button v-on:click="isEmpty" @submit.prevent="isEmpty" class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit" data-toggle="tooltip" data-placement="bottom" title="Subscribe here!">Subscribe</button>
+                <button v-on:click="isEmpty" class="subscribe text-uppercase rounded-sm py-2 px-2" type="submit" data-toggle="tooltip" data-placement="bottom" title="Subscribe here!">Subscribe</button>
               </div>
               <div id="isEmptyText" v-if="isEmpty"></div>
             </form>
@@ -62,7 +62,8 @@ export default {
   methods: {
 
     // IF ELSE
-    isEmpty() {
+    isEmpty(e) {
+      e.preventDefault();
       let input = document.getElementById('input');
       let text = input.value;
       let emptyText = document.getElementById('isEmptyText');
